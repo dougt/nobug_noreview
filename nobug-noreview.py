@@ -31,7 +31,7 @@ def isBugIgnorable(match):
     if summary.find("backout") != -1 or summary.find("back out") != -1 or summary.find("backed out") != -1:
         return True
 
-    if summary.find("bug") != -1 and summary.find("r=") != -1:
+    if summary.find("bug") != -1 or summary.find("r=") != -1:
         return True
 
     # check build user
